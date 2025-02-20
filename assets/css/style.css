@@ -70,6 +70,26 @@ body {
   max-width: 50%;
 }
 
+
+#features .card h4 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44.8px;
+}
+#features .card p {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30.8px;
+  color: #596780;
+}
+
+#layout h3 {
+  max-width: 60%;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44.8px;
+}
+
 .swiper {
   width: 100%;
   padding: 20px;
@@ -99,3 +119,5 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
+
+
