@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --main-color: #eb5500;
+  --bg-color: #eeeff3;
+  --text-color: #040404;
+}
+body {
+  font-family: "Manrope", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.bg-main {
+  background: var(--main-color);
+}
+
+.nav-items a {
+  color: #596780;
+}
+.nav-items a.active {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+#home {
+  height: calc(100vh - 152px);
+  background-image: url(../images/Herobg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+
+  div {
+    max-width: 80%;
+  }
+  h1 {
+    line-height: 90px;
+    letter-spacing: -2%;
+  }
+  p {
+    max-width: 64ch;
+  }
+}
+
+.section-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #919cb0;
+}
+
+#about p {
+  color: #596780;
+  font-size: 32px;
+  line-height: 44.8px;
+}
+
+#gallery h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 44.8px;
+  max-width: 50%;
+}
+
+.swiper {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.swiper-slide {
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  width: calc(426px);
+  height: calc(520px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.swiper-button svg {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.swiper-button svg:hover {
+  transform: scale(1.1);
+}
+.swiper-nav-btn {
+  padding: 16px;
+  border: 1.5px solid var(--text-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
