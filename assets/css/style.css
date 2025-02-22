@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+/* 
+  Copyright © 2025 Tinu Charly. 
+  This CSS is proprietary and not for reuse without permission. 
+  Created for [Company Name]'s machine test. 
+*/
+
 
 :root {
   --main-color: #eb5500;
@@ -12,6 +18,18 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
 }
+
+body::after {
+  content: "Coded by Tinu Charly";
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.23); /* Almost invisible */
+  pointer-events: none;
+  user-select: none;
+}
+
 
 ::-webkit-scrollbar {
   width: 5px;
