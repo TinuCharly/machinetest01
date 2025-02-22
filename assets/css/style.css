@@ -5,7 +5,6 @@
   Created for [Company Name]'s machine test. 
 */
 
-
 :root {
   --main-color: #eb5500;
   --bg-color: #eeeff3;
@@ -25,15 +24,14 @@ body::after {
   bottom: 0;
   right: 0;
   font-size: 10px;
-  color: rgba(0, 0, 0, 0.23); /* Almost invisible */
+  color: rgba(0, 0, 0, 0.23); 
   pointer-events: none;
   user-select: none;
 }
 
-
 ::-webkit-scrollbar {
   width: 5px;
-  height: 5px; 
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -49,7 +47,6 @@ body::after {
   background-color: var(--text-color);
 }
 
-
 .bg-main {
   background: var(--main-color);
 }
@@ -64,12 +61,11 @@ body::after {
 }
 
 #mobileNav {
-  right: -100%;
-  display: none;
-  transition: right 0.3s ease-out;
+  z-index: 50;
+  display: none; 
 }
+
 #mobileNav.show {
-  right: -32px;
   display: flex;
 }
 
@@ -84,6 +80,18 @@ body::after {
   p {
     max-width: 64ch;
   }
+}
+#home h1 {
+  display: inline-block;
+  overflow: hidden;
+}
+#home h1 span {
+  display: inline-block;
+  will-change: transform; 
+}
+.word {
+  display: inline-block; 
+  white-space: nowrap; 
 }
 
 .section-title {
@@ -148,7 +156,7 @@ button.video-btn {
 
 .button-file {
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
   color: #fff;
   z-index: 0;
   background: rgba(0, 0, 0, 0.25);
@@ -158,22 +166,22 @@ button.video-btn {
 }
 
 .button-file i {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   inset: 0;
   border-radius: 30px;
-  padding: 1px; /* the thickness of the border */
-  /* the below will do the magic */
-  -webkit-mask: 
-     linear-gradient(#fff 0 0) content-box, /* this will cover only the content area (no padding) */ 
-     linear-gradient(#fff 0 0); /* this will cover all the area */
-  -webkit-mask-composite: xor; /* needed for old browsers until the below is more supported */
-  mask-composite: exclude; /* this will exclude the first layer from the second so only the padding area will be kept visible */
+  padding: 1px; 
+  
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+   
+      linear-gradient(#fff 0 0); 
+  -webkit-mask-composite: xor; 
+  mask-composite: exclude; 
 }
 
 .button-file i::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -187,24 +195,23 @@ button.video-btn {
   );
 }
 
-
 .control-btn {
   padding: 12px;
 
   svg {
-    width:24px;
+    width: 24px;
     height: 24px;
   }
 }
 
-
-.goTo , .scaleUp {
-  transition: all .3s ease-out;
+.goTo,
+.scaleUp {
+  transition: all 0.3s ease-out;
 }
 .goTo {
   cursor: pointer;
   svg {
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
   }
 }
 .goTo:hover {
@@ -215,7 +222,7 @@ button.video-btn {
 }
 
 footer a {
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 footer a:hover {
@@ -260,7 +267,6 @@ footer a:hover {
   cursor: pointer;
 }
 
-
 @media screen and (max-width: 1024px) {
   .section-title {
     font-weight: 500;
@@ -287,14 +293,13 @@ footer a:hover {
     font-size: 26px;
     line-height: 28.8px;
   }
-  
 }
 @media screen and (max-width: 760px) {
   .control-btn {
     padding: 8px;
-  
+
     svg {
-      width:16px;
+      width: 16px;
       height: 16px;
     }
   }
@@ -306,7 +311,7 @@ footer a:hover {
     font-weight: 500;
     line-height: 28.8px;
   }
-  .swiper-nav-btn  {
+  .swiper-nav-btn {
     padding: 12px;
   }
   #features .card h4 {
@@ -316,8 +321,5 @@ footer a:hover {
   #features .card p {
     font-size: 18px;
     line-height: 30.8px;
-  }
-  #mobileNav {
-    right: -200%;
   }
 }

@@ -58,7 +58,7 @@
                 </button>
             </div>
             <ul id="mobileNav"
-                class=" absolute bg-[#eb5500] flex flex-col p-10 rounded-3xl top-[100px] z-20 items-start gap-4">
+                class=" absolute bg-[#eb5500] flex flex-col p-10 rounded-3xl top-[100px] -right-8 z-20 items-start gap-4">
                 <div
                     class="focus-within:border-[#040404] flex sm:hidden border-[1.5px] border-solid border-[#E7ECF2] bg-[#eeeff3] rounded-full pl-5 ">
                     <input type="text" placeholder="Search" class="focus:outline-none focus:border-none">
@@ -660,55 +660,11 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+
+    <script src="https://unpkg.com/gsap/dist/gsap.min.js"></script>
+
+    <script src="https://unpkg.com/gsap/dist/ScrollTrigger.min.js"></script>
     <script src="assets/js/script.js "></script>
-    <script>
-        const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => 1 - Math.pow(1 - t, 3), // Smooth cubic ease-out
-            smooth: true,
-            smoothTouch: false,
-        });
-
-
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-
-
-        const swiper = new Swiper(".swiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            navigation: {
-                nextEl: ".button-next",
-                prevEl: ".button-prev",
-            },
-            breakpoints: {
-                768: { slidesPerView: 2 },
-                1260: { slidesPerView: 3 },
-            },
-            on: {
-                init: function () {
-                    if (this.isBeginning) {
-                        document.querySelector(".button-prev").style.borderColor = "#E7ECF2";
-                    }
-                },
-                reachBeginning: function () {
-                    document.querySelector(".button-prev").style.borderColor = "#E7ECF2";
-                },
-                reachEnd: function () {
-                    document.querySelector(".button-next").style.borderColor = "#E7ECF2";
-                },
-                fromEdge: function () {
-                    document.querySelector(".button-prev").style.borderColor = "";
-                    document.querySelector(".button-next").style.borderColor = "";
-                },
-            },
-        });
-
-    </script>
 </body>
 
 </html>
