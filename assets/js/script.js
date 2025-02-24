@@ -75,6 +75,13 @@ tl.from(paragraph, {
     duration: 1,
 });
 
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+    e.preventDefault();
+  }
+});
+
 
 const sections = ["about", "gallery", "features", "layout", "videos"];
 
